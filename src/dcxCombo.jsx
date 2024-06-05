@@ -3,6 +3,7 @@ import React, {useState, useEffect} from "react";
 function DcxCombo() {
     const [data, setData] = useState(null);
   
+    console.log("dcxCombo");
     useEffect(() => {
       fetch('/referential/dcx')
         .then(response => response.json())

@@ -1,0 +1,8 @@
+{
+    "realm": "ecommerce",
+    "auth-server-url": "http://localhost",
+    "ssl-required": "external",
+    "resource": "mo",
+    "public-client": true,
+    "confidential-port": 0
+  }

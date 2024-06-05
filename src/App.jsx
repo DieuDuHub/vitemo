@@ -2,19 +2,28 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import LoginComponent from './login'
+import Menu from './menu'
 import DcxCombo from './dcxCombo'
+import LoginForm from './login' 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ReactKeycloakProvider } from '@react-keycloak/web';
+import keycloak from './keycloak';
+import Secured from './secured';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    <div>
-      <LoginComponent />
-      <DcxCombo />
-    </div>
-    
+   <div>
+     <BrowserRouter>
+       <Routes>
+         <Route exact path="/" element={<DcxCombo />} />
+         <Route path="/secured" element={<Secured />} />
+       </Routes>
+     </BrowserRouter>
+   </div>
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
