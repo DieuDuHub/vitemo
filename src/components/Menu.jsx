@@ -8,21 +8,15 @@ function Menu(props) {
   
     return (
         <div>
-          <div>{`User is ${
+          {`${props.name} is ${
             !keycloak.authenticated ? 'NOT ' : ''
-          }authenticated`}</div>
+          }authenticated`}
     
           {!!keycloak.authenticated && (
-            <button type="button" onClick={() => keycloak.logout()}>
+            <p class="btn btn-outline-primary " type="button" onClick={() => keycloak.logout()}>
               Logout
-            </button>
+            </p>
           )}
-          <div>
-              <h1>Menu</h1>
-              <ul>
-                  <li>Hello , {props.name}</li>
-              </ul>   
-          </div>
         </div>
     )
 }

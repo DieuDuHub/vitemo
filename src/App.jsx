@@ -2,19 +2,20 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Menu from './menu'
 import DcxCombo from './dcxCombo'
 import LoginForm from './login' 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ReactKeycloakProvider } from '@react-keycloak/web';
 import keycloak from './keycloak';
-import Secured from './secured';
+import Secured from './components/secured';
+import Header from './components/Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+    <Header />
    <div>
      <BrowserRouter>
        <Routes>

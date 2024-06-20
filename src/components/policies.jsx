@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useKeycloak } from '@react-keycloak/web';
-import Policy from './components/policy';
+import Policy from './policy';
 function Policies() {
 
     // Using Object destructuring
