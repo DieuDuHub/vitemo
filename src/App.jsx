@@ -15,8 +15,14 @@ function App() {
 
   return (
     <>
+    <ReactKeycloakProvider 
+            //initOptions={{ onLoad: 'login-required' }}
+            authClient={keycloak}
+            //onEvent={eventLogger}
+            //onTokens={tokenLogger}
+            >
     <Header />
-   <div>
+    <div>
      <BrowserRouter>
        <Routes>
          <Route exact path="/" element={<DcxCombo />} />
@@ -45,6 +51,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      </ReactKeycloakProvider>        
     </>
   )
 }

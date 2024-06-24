@@ -1,9 +1,17 @@
 import React from 'react';
 import Menu from './Menu';
+import { useKeycloak } from '@react-keycloak/web';
+
 
 function Header() {
+
+
+    const { keycloak } = useKeycloak()
+
     return (
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+
             <a class="navbar-brand" href="#">NavBar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -13,9 +21,7 @@ function Header() {
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/Secured">Manage</a>
-                </li>
+                {keycloak.authenticated ? <li class="nav-item"><a class="nav-link" href="/Secured">Manage</a></li> : null}
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
                 </li>
@@ -28,6 +34,9 @@ function Header() {
                     <a class="dropdown-item" href="#">Another action</a>
                     <a class="dropdown-item" href="#">Something else here</a>
                     </div>
+                </li>
+                <li>
+                    <Menu name="Mat"/>
                 </li>
                 </ul>
 
