@@ -10,12 +10,9 @@ function Secured() {
     return (
 
         
-            <div class="row g-5">
-
-                <div class="col-md-7 col-lg-8">
+            <div>
                     <PolicyCreation />
                 </div>
-            </div>
   
     )
 }

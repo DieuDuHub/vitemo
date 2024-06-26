@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import DcxCombo from './dcxCombo'
-import LoginForm from './login' 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ReactKeycloakProvider } from '@react-keycloak/web';
 import keycloak from './keycloak';
 import Secured from './components/secured';
 import Header from './components/Header'
+import Policies from './components/policies'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,11 +22,13 @@ function App() {
             //onTokens={tokenLogger}
             >
     <Header />
-    <div>
+    <div style={{
+    paddingTop: '50px'}}>
      <BrowserRouter>
        <Routes>
          <Route exact path="/" element={<DcxCombo />} />
          <Route path="/secured" element={<Secured />} />
+         <Route path="/search" element={<Policies />} />
        </Routes>
      </BrowserRouter>
    </div>

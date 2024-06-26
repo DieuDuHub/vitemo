@@ -10,17 +10,18 @@ function Header() {
 
     return (
         
-        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-light">
 
-            <a class="navbar-brand" href="#">NavBar</a>
+            <a className="navbar-brand" href="/">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Allianz.svg" width="100" height="30" alt=""/>
+            </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
+               
+                {keycloak.authenticated ? <li class="nav-item active"><a class="nav-link" href="/search">Search</a></li> : null}
                 {keycloak.authenticated ? <li class="nav-item"><a class="nav-link" href="/Secured">Manage</a></li> : null}
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
