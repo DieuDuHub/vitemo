@@ -15,25 +15,26 @@ function Header() {
             <a className="navbar-brand" href="/">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Allianz.svg" width="100" height="30" alt=""/>
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+            <div className="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul className="navbar-nav">
                
-                {keycloak.authenticated ? <li class="nav-item active"><a class="nav-link" href="/search">Search</a></li> : null}
-                {keycloak.authenticated ? <li class="nav-item"><a class="nav-link" href="/Secured">Manage</a></li> : null}
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                {keycloak.authenticated ? <li className="nav-item active"><a className="nav-link" href="/search">Search</a></li> : null}
+                {keycloak.authenticated ? <li className="nav-item"><a className="nav-link" href="/Secured">Manage</a></li> : null}
+                
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Pricing</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <li className="nav-item dropdown">
+                    <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Dropdown link
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a className="dropdown-item" href="#">Action</a>
+                    <a className="dropdown-item" href="#">Another action</a>
+                    <a className="dropdown-item" href="#">Something else here</a>
                     </div>
                 </li>
                 <li>

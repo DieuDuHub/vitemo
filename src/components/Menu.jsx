@@ -16,11 +16,11 @@ function Menu(props) {
 
          
           {
-            !keycloak.authenticated ? <button class="w-100 btn btn-primary btn-lg" onClick={keylogin}>Login</button> : ''
+            !keycloak.authenticated ? <button className="w-100 btn btn-primary btn-lg" onClick={keylogin}>Login</button> : ''
           }
     
           {!!keycloak.authenticated && (
-            <p class="btn btn-outline-primary " type="button" onClick={() => keycloak.logout()}>
+            <p className="btn btn-outline-primary " type="button" onClick={() => keycloak.logout()}>
               Logout
             </p>
           )}
